@@ -1,7 +1,6 @@
 package login;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.swing.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
