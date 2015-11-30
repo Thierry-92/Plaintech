@@ -12,14 +12,10 @@ public class Validateregister
     {
      boolean st =false;
      try{
-          
-     //loads the mysql-java-connector
-        Class.forName("com.mysql.jdbc.Driver");
- 
-     //creating connection with the database. Make a statement, then declare the values with setstring method email and pass. If values inserted then execute query.
-     //
-        Connection con=DriverManager.getConnection
-                       ("jdbc:mysql://localhost:3306/plaintech","root","root");
+          //make connection
+    	 
+ 		Database dbcon = new Database();
+ 		Connection con = dbcon.returnConnection();
         PreparedStatement ps =con.prepareStatement
                             ("INSERT INTO users (email,pass,name,address,city,country,telnumber,company) VALUES (?,?,?,?,?,?,?,?)");
 ps.setString(1, email);

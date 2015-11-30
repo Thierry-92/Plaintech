@@ -36,6 +36,7 @@ public class Login extends HttpServlet {
         {
         	HttpSession session = request.getSession();
         	session.setAttribute("username", emaillogin);
+        	session.setMaxInactiveInterval(30*60);
         	
         //Name and value of the cookie.
             Cookie ck=new Cookie("email",emaillogin);
