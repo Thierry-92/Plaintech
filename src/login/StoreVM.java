@@ -68,18 +68,33 @@ public class StoreVM extends HttpServlet {
 				if(button == 1) {
 					String sql = "INSERT INTO vms (cpu, ram, storage, status) VALUES (1,2,50,running) WHERE email = "+ user ;
 					stmt.executeUpdate(sql);
-					
+					if (update > 0 ) {
+					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
+					} else {
+					JOptionPane.showMessageDialog(dialog, "Something went wrong! Please contact us.");
+					RequestDispatcher rs = request.getRequestDispatcher("index.html");
+					rs.forward(request, response);
+					}
 				} else if (button == 2) {
 					String sql = "INSERT INTO vms (cpu, ram, storage, status) VALUES (2,4,200,running) WHERE email = "+ user ;
 					int updated = stmt.executeUpdate(sql);
 					if (update > 0) {
 					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
 					} else {
-					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us");						
+					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us");
+					RequestDispatcher rs = request.getRequestDispatcher("index.html");
+					rs.forward(request, response);						
 						}
 				} else if (button == 3) {
 					String sql = "INSERT INTO vms (cpu, ram, storage, status) VALUES (4,8,500,running) WHERE email = "+ user ;
-					stmt.executeUpdate(sql);
+					int update = stmt.executeUpdate(sql);
+					if (update > 0) { 
+					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
+					} else {
+					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us");	
+					RequestDispatcher rs = request.getRequestDispatcher("index.html");
+					rs.forward(request, response);
+					}
 				} else {
 					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us.");
 					RequestDispatcher rs = request.getRequestDispatcher("index.html");
