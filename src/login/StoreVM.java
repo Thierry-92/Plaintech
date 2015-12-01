@@ -2,7 +2,14 @@ package login;
 
 import java.io.IOException;
 import java.sql.*;
+<<<<<<< HEAD
 import java.sql.PreparedStatement;
+=======
+<<<<<<< HEAD
+import java.sql.PreparedStatement;
+=======
+>>>>>>> 818061de85655ac1b48a33bd1fd66ae8182f6372
+>>>>>>> 25bfba2043bac2839a6fb95bce886d5a8adbb6e3
 import javax.swing.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -53,7 +60,16 @@ public class StoreVM extends HttpServlet {
 		//Connect database
 		Database dbcon = new Database();
 		Connection con = dbcon.returnConnection();
+<<<<<<< HEAD
 		PreparedStatement ps = con.prepareStatement("INSERT INTO vms VALUES(?,?,?,?,?)");
+=======
+<<<<<<< HEAD
+		PreparedStatement ps = con.prepareStatement("INSERT INTO vms VALUES(?,?,?,?,?)");
+=======
+		Statement statement = con.createStatement();
+		
+>>>>>>> 818061de85655ac1b48a33bd1fd66ae8182f6372
+>>>>>>> 25bfba2043bac2839a6fb95bce886d5a8adbb6e3
 		
 		if (JOptionPane.showConfirmDialog(dialog, "Are you sure?", "WARNING",
 		        JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
@@ -68,12 +84,23 @@ public class StoreVM extends HttpServlet {
 			} else {
 				
 				if(button == 1) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 25bfba2043bac2839a6fb95bce886d5a8adbb6e3
 					ps.setString(1, user);
 					ps.setString(2, "running");
 					ps.setInt(3, 1);
 					ps.setInt(4, 2);
 					ps.setInt(5, 50);
 					int updated =ps.executeUpdate();
+<<<<<<< HEAD
+=======
+=======
+					String sql = "INSERT INTO vms (cpu, ram, storage, status) VALUES (1,2,50,running) WHERE email = "+ user +"";
+					int updated = statement.executeUpdate(sql);
+>>>>>>> 818061de85655ac1b48a33bd1fd66ae8182f6372
+>>>>>>> 25bfba2043bac2839a6fb95bce886d5a8adbb6e3
 					if (updated > 0 ) {
 					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
 					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");
@@ -84,12 +111,23 @@ public class StoreVM extends HttpServlet {
 					rs.forward(request, response);
 					}
 				} else if (button == 2) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 25bfba2043bac2839a6fb95bce886d5a8adbb6e3
 					ps.setString(1, user);
 					ps.setString(2, "running");
 					ps.setInt(3, 1);
 					ps.setInt(4, 2);
 					ps.setInt(5, 50);
 					int updated =ps.executeUpdate();
+<<<<<<< HEAD
+=======
+=======
+					String sql = "INSERT INTO vms (cpu, ram, storage, status) VALUES (2,4,200,running) WHERE email = "+ user +"";
+					int updated = statement.executeUpdate(sql);
+>>>>>>> 818061de85655ac1b48a33bd1fd66ae8182f6372
+>>>>>>> 25bfba2043bac2839a6fb95bce886d5a8adbb6e3
 					if (updated > 0) {
 					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
 					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");
@@ -100,6 +138,10 @@ public class StoreVM extends HttpServlet {
 					rs.forward(request, response);						
 						}
 				} else if (button == 3) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 25bfba2043bac2839a6fb95bce886d5a8adbb6e3
 					ps.setString(1, user);
 					ps.setString(2, "running");
 					ps.setInt(3, 1);
@@ -107,6 +149,14 @@ public class StoreVM extends HttpServlet {
 					ps.setInt(5, 50);
 					int updated =ps.executeUpdate();
 					if (updated > 0) { 
+<<<<<<< HEAD
+=======
+=======
+					String sql = "INSERT INTO vms (email, cpu, ram, storage, status) VALUES (thierry,4,8,500,running)";
+					int update = statement.executeUpdate(sql);
+					if (update > 0) { 
+>>>>>>> 818061de85655ac1b48a33bd1fd66ae8182f6372
+>>>>>>> 25bfba2043bac2839a6fb95bce886d5a8adbb6e3
 					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
 					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");
 					rs.forward(request, response);		
