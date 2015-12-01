@@ -40,6 +40,20 @@
         </div>
    </div>
    </div>
+   <% if(session == null || session.getAttribute("username") == null) { %> 
+      <div class="main">
+		<div class="content_top">
+			<div class="wrap">
+		
+		</div>
+   </div>
+   </div>
+   
+   <% } else { %>
+   
+   blablalbla
+   
+  <% } %>
    <div class="main">
 		<div class="content_top">
 			<div class="wrap">

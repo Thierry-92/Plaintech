@@ -90,6 +90,8 @@ public class StoreVM extends HttpServlet {
 					ps.setInt(4, 2);
 					ps.setInt(5, 50);
 					int updated =ps.executeUpdate();
+					//Check if query is executed
+					//If query is executed then show a message and send to their page.
 					if (updated > 0) {
 					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
 					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");
