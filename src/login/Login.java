@@ -45,14 +45,14 @@ public class Login extends HttpServlet {
             ck.setMaxAge(1800);
         //Request the welcome.java file and forward client to that file.
             JOptionPane.showMessageDialog(dialog, "Successfull logged in!");
-            RequestDispatcher rs = request.getRequestDispatcher("index.html");
+            RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
             rs.forward(request, response);
         }
         else
         {
         //User isnt in database. Then show message and send again to login.html with clean fields.
         	JOptionPane.showMessageDialog(dialog, "Username or password incorrect!");
-           RequestDispatcher rs = request.getRequestDispatcher("index.html");
+           RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
            rs.forward(request, response);
         }
         

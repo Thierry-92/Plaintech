@@ -63,7 +63,7 @@ public class StoreVM extends HttpServlet {
 			//Check if session is set.
 			if(session == null || session.getAttribute("username") == null) {
 				JOptionPane.showMessageDialog(dialog, "Please login first before ordering.");
-				RequestDispatcher rs = request.getRequestDispatcher("index.html");
+				RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
 	            rs.forward(request, response);
 			} else {
 				
@@ -75,12 +75,12 @@ public class StoreVM extends HttpServlet {
 					ps.setInt(5, 50);
 					int updated =ps.executeUpdate();
 					if (updated > 0 ) {
-					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
+					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM! Check the status at your personal page.");
 					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");
 					rs.forward(request, response);		
 					} else {
 					JOptionPane.showMessageDialog(dialog, "Something went wrong! Please contact us.");
-					RequestDispatcher rs = request.getRequestDispatcher("index.html");
+					RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
 					rs.forward(request, response);
 					}
 				} else if (button == 2) {
@@ -98,7 +98,7 @@ public class StoreVM extends HttpServlet {
 					rs.forward(request, response);		
 					} else {
 					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us");
-					RequestDispatcher rs = request.getRequestDispatcher("index.html");
+					RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
 					rs.forward(request, response);						
 						}
 				} else if (button == 3) {
@@ -114,18 +114,18 @@ public class StoreVM extends HttpServlet {
 					rs.forward(request, response);		
 					} else {
 					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us");	
-					RequestDispatcher rs = request.getRequestDispatcher("index.html");
+					RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
 					rs.forward(request, response);
 					}
 				} else {
 					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us.");
-					RequestDispatcher rs = request.getRequestDispatcher("index.html");
+					RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
 					rs.forward(request, response);
 				
 				
 		}}} else {
 			JOptionPane.showMessageDialog(dialog, "You now will be redirected to the homepage.");
-			RequestDispatcher rs = request.getRequestDispatcher("index.html");
+			RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
 			rs.forward(request, response);
 		}
 		} catch (Exception e ) {
