@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Plaintech | Home</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -14,24 +14,47 @@
        <div class="header_top">
        	 <div class="wrap">
 			<div class="logo">
-			     <a href="index.html"><font size="10">Plaintech</font></a>
+			     <a href="index.jsp"><font size="10">Plaintech</font></a>
 			</div>
+			<% if(session == null || session.getAttribute("username") == null) { %>
 				<div class="login_button">
 					<div class="call">
 						<p>Call us now: 033-7500800</p>
 					</div>
 					    <ul>
-					   		 <li><img src="images/login.png" alt="" /><a href="#">Login</a></li>
-					   		 <li><a href="logout.java">Logout</a></li>
+					    	<li><form action="login" method="post">
+					    	<input id="emaillogin" name="emaillogin" type="text" value="Username" class="field">
+                   			<input id="passlogin" name="passlogin" type="password" value="Password" class="field">
+					   		 <div class="buttonss"><button class="grey">Login</button></div>
+					   		 </form></li>
 					    </ul>
 				  </div>
   			<div class="clear"></div>
   		</div>
+	
+				 <% } else { %> <div class="login_button">
+					<div class="call1">
+						<p>Call us now: 033-7500800</p>
+					</div>
+					    <ul> 
+					    	<li><form action="manageVM" method="post">
+					    	<div class="buttonss"><button type="submit" class="grey" value="manageVM">Personal page </button></div>
+							</form></li>
+					   		 <li><form action="logout" method="post">
+								<div class="buttonss"><button type="submit" class="grey" value="Logout">Log out </button></div>
+							</form></li>
+					    </ul>
+				  </div>
+  			<div class="clear"></div>
+  			
+				 <% } %>
+				 </div>
 	</div>
+
    <div class="menu">
    	  <div class="wrap">
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.jsp">Home</a></li>
 				<li><a href="cloud.html">Cloud Hosting</a></li>
 				<li><a href="services.html">Cloud Services</a></li>
 				<li><a href="about.html">About Plaintech</a></li>
@@ -39,7 +62,7 @@
 			</ul>
         </div>
    </div>
-   </div>
+  
   <div class="main">
 	<div class="content_top">
 		    <div class="wrap">
@@ -153,7 +176,7 @@
 					<h3>Page Layouts</h3>
 						<div class="f_menu">
 							   <ul>
-						       		<li><a href="index.html">Home</a></li>
+						       		<li><a href="index.jsp">Home</a></li>
 									<li><a href="cloud.html">Cloud Hosting</a></li>
 									<li><a href="services.html">Cloud Services</a></li>
 									<li><a href="about.html">About Plaintech</a></li>
