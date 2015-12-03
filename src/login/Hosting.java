@@ -38,7 +38,7 @@ public class Hosting extends HttpServlet {
     	//Check if logged in.
     	if(session == null || session.getAttribute("username") == null) {
 			JOptionPane.showMessageDialog(dialog, "Please login first before ordering.");
-			RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher rs = request.getRequestDispatcher("index.html");
             rs.forward(request, response);
     	} else {
     		try {

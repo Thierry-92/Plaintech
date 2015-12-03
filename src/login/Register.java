@@ -4,6 +4,7 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+import javax.servlet.http.Cookie;
 import javax.swing.*;
 
 /**
@@ -47,18 +48,15 @@ public class Register extends HttpServlet {
             ck.setMaxAge(1800);
         //Request the registered.java file and forward client to that file.
        
-            JOptionPane.showMessageDialog(dialog, "Successfully registered.");
-            HttpSession session = request.getSession();
-        	session.setAttribute("username", email);
-        	session.setMaxInactiveInterval(30*60);
-            RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
+            JOptionPane.showMessageDialog(dialog, "Successfully registered. Please login!");
+            RequestDispatcher rs = request.getRequestDispatcher("index.html");
             rs.forward(request, response);
         }
         else
         {
         //User isnt registered in database. Then show message and send again to register.html with clean fields.
         	JOptionPane.showMessageDialog(dialog, "Not all fields are filled in correctly!");
-           RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
+           RequestDispatcher rs = request.getRequestDispatcher("index.html");
            rs.forward(request, response);
         }
         
