@@ -45,12 +45,12 @@
 							</form></li>
 					    </ul>
 				  </div>
+				  </div>
   			<div class="clear"></div>
   			
 				 <% } %>
 				 </div>
-	</div>
-
+	
    <div class="menu">
    	  <div class="wrap">
 			<ul>
@@ -61,7 +61,6 @@
 							<li><a href="support.html">Support</a></li>
 			</ul>
         </div>
-   </div>
    </div>
    <div class="main"> 
    <div class="content_top">

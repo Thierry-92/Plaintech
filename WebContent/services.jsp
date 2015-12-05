@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Plaintech | Home</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -45,22 +45,22 @@
 							</form></li>
 					    </ul>
 				  </div>
+				  </div>
   			<div class="clear"></div>
   			
 				 <% } %>
 				 </div>
-	</div>
+	
    <div class="menu">
    	  <div class="wrap">
 			<ul>
 				<li><a href="index.jsp">Home</a></li>
-				<li><a href="cloud.html">Cloud Hosting</a></li>
-				<li><a href="services.html">Cloud Services</a></li>
-				<li><a href="about.html">About Plaintech</a></li>
-				<li><a href="support.html">Support</a></li>
+				<li><a href="cloud.jsp">Cloud Hosting</a></li>
+				<li><a href="services.jsp">Cloud Services</a></li>
+				<li><a href="about.jsp">About Plaintech</a></li>
+				<li><a href="support.jsp">Support</a></li>
 			</ul>
         </div>
-   </div>
    </div>
    <div class="main">
 		<div class="content_top">
@@ -90,10 +90,10 @@
 						<div class="f_menu">
 							   <ul>
 						       		<li><a href="index.jsp">Home</a></li>
-									<li><a href="cloud.html">Cloud Hosting</a></li>
-									<li><a href="services.html">Cloud Services</a></li>
-									<li><a href="about.html">About Plaintech</a></li>
-									<li><a href="support.html">Support</a></li>
+									<li><a href="cloud.jsp">Cloud Hosting</a></li>
+									<li><a href="services.jsp">Cloud Services</a></li>
+									<li><a href="about.jsp">About Plaintech</a></li>
+									<li><a href="support.jsp">Support</a></li>
 						   	   </ul>
 						</div>
 				</div>

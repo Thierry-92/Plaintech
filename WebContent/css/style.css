@@ -455,7 +455,7 @@ body{
 .sidebar{
 	float:left;
 	margin-left:4%;
-	width:25%%;
+        width:25%;
 }
 .sidebar_top{
 	padding:20px 0;
@@ -1040,7 +1040,7 @@ ul.pricing li ul li:last-child a {
 .login_panel {
 	margin:3% 0 0 0;
 }
-. form {
+.form {
 	margin:0;
 }
 .register_account form input[type="text"],[type="email"],[type="password"]{
@@ -1269,15 +1269,12 @@ ul.pricing li ul li:last-child a {
 .services_list{
 	padding:5px 0;
 }
-.register_account,. {
+.register_account{
 	float:inherit;
 	width:96%;
 	padding:10px;
 }
-. {
-	margin:3% 0 0 0;
-}
-. form {
+.form {
 	margin:0;
 }
 .register_account form input[type="text"],[type="email"],[type="password"]{
@@ -1292,18 +1289,18 @@ ul.pricing li ul li:last-child a {
 .register_account form input[type="text"].number{
 	width:64%;
 }
-.register_account,. {
+.register_account, .login_panel{
 	float:inherit;
 	width:96%;
 	padding:10px;
 }
-. {
+.login_panel{
 	margin:3% 0 0 0;
 }
-. button{
+.button{
 	font-size:15px;
 }
-. form {
+.form {
 	margin:0;
 }
 .footer_grid1,.footer_grid2,.footer_grid3,.footer_grid4{
@@ -1537,21 +1534,22 @@ ul.pricing li ul li:last-child a {
 .services_list{
 	padding:5px 0;
 }
-.register_account,. {
+.register_account, .login_panel{
 	float:inherit;
 	width:96%;
 	padding:10px;
 }
-. {
+.login_panel{
 	margin:3% 0 0 0;
 }
-. form {
+.form {
 	margin:0;
 }
-.register_account form input[type="text"],[type="email"],[type="password"]]{
+.register_account form input[type="text"],[type="email"],[type="password"]{
 	width:185px;
 }
-.register_account form select{
+.registe
+r_account form select{
 	width:205px;
 }
 .register_account form input[type="text"].code{
@@ -1560,18 +1558,18 @@ ul.pricing li ul li:last-child a {
 .register_account form input[type="text"].number{
 	width:64%;
 }
-.register_account,. {
+.register_account, .login_panel{
 	float:inherit;
 	width:96%;
 	padding:10px;
 }
-. {
+.login_panel {
 	margin:3% 0 0 0;
 }
-. button{
+.button{
 	font-size:15px;
 }
-. form {
+.form {
 	margin:0;
 }
 .footer_grid1,.footer_grid2,.footer_grid3,.footer_grid4{

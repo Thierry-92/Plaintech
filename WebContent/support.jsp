@@ -45,11 +45,12 @@
 							</form></li>
 					    </ul>
 				  </div>
+				  </div>
   			<div class="clear"></div>
   			
 				 <% } %>
 				 </div>
-	</div>
+	
    <div class="menu">
    	  <div class="wrap">
 		<ul>

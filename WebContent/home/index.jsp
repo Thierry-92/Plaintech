@@ -57,7 +57,7 @@
    	  <div class="wrap">
 			<ul>
 				<li><a href="index.jsp">Home</a></li>
-				<li><a href="hosting.jsp">Cloud Hosting</a></li>
+				<li><a href="filter/hosting.jsp">Cloud Hosting</a></li>
 				<li><a href="services.jsp">Cloud Services</a></li>
 				<li><a href="about.jsp">About Plaintech</a></li>
 				<li><a href="support.jsp">Support</a></li>

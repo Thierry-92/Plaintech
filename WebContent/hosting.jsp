@@ -44,12 +44,13 @@
 								<div class="buttonss"><button type="submit" class="grey" value="Logout">Log out </button></div>
 							</form></li>
 					    </ul>
+					    </div>
 				  </div>
   			<div class="clear"></div>
   			
 				 <% } %>
 				 </div>
-	</div>
+	
    <div class="menu">
    	  <div class="wrap">
 			<ul>
@@ -60,7 +61,6 @@
 				<li><a href="support.html">Support</a></li>
 			</ul>
         </div>
-   </div>
    </div>
 
       <div class="main">
