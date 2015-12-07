@@ -37,8 +37,8 @@
 						<p>Call us now: 033-7500800</p>
 					</div>
 					    <ul> 
-					    	<li><form action="manageVM" method="post">
-					    	<div class="buttonss"><button type="submit" class="grey" value="manageVM">Personal page </button></div>
+					    	<li><form action="personalpage.jsp" method="post">
+					    	<div class="buttonss"><button type="submit" class="grey" value="personalpage.jsp">Personal page </button></div>
 							</form></li>
 					   		 <li><form action="logout" method="post">
 								<div class="buttonss"><button type="submit" class="grey" value="Logout">Log out </button></div>
@@ -55,7 +55,7 @@
    	  <div class="wrap">
 			<ul>
 				<li><a href="index.jsp">Home</a></li>
-				<li><a href="cloud.jsp">Cloud Hosting</a></li>
+				<li><a href="hosting.jsp">Cloud Hosting</a></li>
 				<li><a href="services.jsp">Cloud Services</a></li>
 				<li><a href="about.jsp">About Plaintech</a></li>
 				<li><a href="support.jsp">Support</a></li>
@@ -90,7 +90,7 @@
 						<div class="f_menu">
 							   <ul>
 						       		<li><a href="index.jsp">Home</a></li>
-									<li><a href="cloud.jsp">Cloud Hosting</a></li>
+									<li><a href="hosting.jsp">Cloud Hosting</a></li>
 									<li><a href="services.jsp">Cloud Services</a></li>
 									<li><a href="about.jsp">About Plaintech</a></li>
 									<li><a href="support.jsp">Support</a></li>

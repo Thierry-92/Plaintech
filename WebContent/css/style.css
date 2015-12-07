@@ -100,6 +100,19 @@ body{
         -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;  
         cursor:pointer;   
 }
+.button button,.search button,.plans_table tfoot td.order_now button,.domain_button button{
+	    padding:10px 15px;
+	    margin-bottom: 15px;
+	    margin-top: 15px;
+	    font-size:15px;
+	    font-weight:bold;
+	    color             : #fff;
+	    -webkit-box-shadow: 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
+        -moz-box-shadow   : 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
+        box-shadow        : 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
+        -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;  
+        cursor:pointer;   
+}
 .call p{
 	margin-left: 3px;
 	font-size:13px;
@@ -537,6 +550,25 @@ body{
 	padding:30px 0;
 	background:#F9F9F9;
 }
+.change_vm{
+	width:22%;
+	color:#616161;
+}
+.change_vm input[type="text"] {
+	font-size:12px;
+	color:#B3B1B1;
+	padding:8px;
+	outline:none;
+	margin:6px 0;
+	width:92%;
+}
+.personal_page h3,.plans h3,.domain_registration h3{
+	font-size:30px;
+	color:#3A3939;
+	padding:5px 0;
+	font-family:'Electrolize', sans-serif;
+	text-transform:uppercase;
+}
 .register_account{
 	float:left;
 	width:62%;
@@ -545,7 +577,7 @@ body{
     border:1px solid #C0BEBE;
     -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
 }
-.register_account form input[type="text"],[type="email"],[type="password"]{
+.register_account form input[type="text"],input[type="email"],input[type="password"]{
 	font-size:12px;
 	color:#B3B1B1;
 	padding:8px;
@@ -553,7 +585,6 @@ body{
 	margin:5px 0;
 	width:340px;
 }
-
 .register_account form select{
 	width:360px;
 	color:#666;

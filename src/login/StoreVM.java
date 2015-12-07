@@ -48,7 +48,6 @@ public class StoreVM extends HttpServlet {
 		String user = (String) session.getAttribute("username");
 		final JDialog dialog = new JDialog();
 		dialog.setAlwaysOnTop(true);  
-		
 		try { 
 		//Connect database
 		Database dbcon = new Database();
@@ -74,6 +73,10 @@ public class StoreVM extends HttpServlet {
 					ps.setInt(4, 2);
 					ps.setInt(5, 50);
 					int updated =ps.executeUpdate();
+					
+					String [] command = {"virt-install", "-n"+user+"", "-s 50", "--vcpus=2", "-r 1024", "--accelerate", "-f path/to/image", " '\' ", "--cdrom debian.iso"};
+					ProcessBuilder pb = new ProcessBuilder(command);
+					
 					if (updated > 0 ) {
 					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM! Check the status at your personal page.");
 					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");

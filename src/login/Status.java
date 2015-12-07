@@ -10,14 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.sql.*;
+import java.io.PrintWriter;
 /**
  * Servlet implementation class Hosting
  */
-@WebServlet("/Hosting")
-public class Hosting extends HttpServlet {
+@WebServlet("/Status")
+public class Status extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	
+@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -34,17 +37,17 @@ public class Hosting extends HttpServlet {
 		String user = (String) session.getAttribute("username");
 		final JDialog dialog = new JDialog();
     	dialog.setAlwaysOnTop(true); 
-    	
+    	PrintWriter out = response.getWriter();
     	//Check if logged in.
     	if(session == null || session.getAttribute("username") == null) {
-			JOptionPane.showMessageDialog(dialog, "Please login first before ordering.");
+			JOptionPane.showMessageDialog(dialog, "Please login first.");
 			RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
             rs.forward(request, response);
     	} else {
     		try {
     		//Get info from DB.
     		Statement st = conn.createStatement();
-    		st.executeQuery("SELECT status, ram, storage, cpu FROM vm WHERE email = '"+ user +"';");
+    		st.executeQuery("SELECT status, ram, storage, cpu FROM vms WHERE user_email = '"+ user +"';");
     		ResultSet rs = (ResultSet) st.getResultSet();
     		
     		//Set variables with information from DB.
@@ -57,13 +60,13 @@ public class Hosting extends HttpServlet {
     			//Build short htmltable
     			String htmlResponse = "<!DOCTYPE html><html><head>";
     			 htmlResponse += "<style> table, th, td {border: 1px solid black;}</style></head><body>";
- 		         htmlResponse += "<table><tr><td><b>Current State of Server</b></td><td>&nbsp&nbsp&nbsp&nbsp&nbsp</td><td>" + status +"</td></tr>";
- 		         htmlResponse += "<tr><td><b>The amount of RAM</b></td><td></td><td>" + ram +"</td></tr>";   
- 		         htmlResponse += "<tr><td><b>The amount of CPU's</b></td><td></td><td>" + cpu +"</td></tr>"; 
- 		         htmlResponse += "<tr><td><b>Amount of diskspace</b></td><td></td><td>" + storage +"</td></tr></table>"; 
+ 		         htmlResponse += "<table><tr><td><b>Current State of Server</b></td><td>" + status +"</td></tr>";
+ 		         htmlResponse += "<tr><td><b>The amount of CPU's</b></td><td>" + cpu +"</td></tr>"; 
+ 		         htmlResponse += "<tr><td><b>The amount of RAM</b></td><td>" + ram +"   GB"+"</td></tr>";   
+ 		         htmlResponse += "<tr><td><b>Amount of diskspace</b></td><td>" + storage +"   GB"+"</td></tr></table>"; 
 		         htmlResponse += "</html>";
 		         
-		         System.out.println(htmlResponse);
+		         out.println(htmlResponse);
     		}
     		
     		}catch(Exception e)
