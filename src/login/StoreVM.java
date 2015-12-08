@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import java.util.ArrayList;
+import java.util.List;
 /**
  * Servlet implementation class storeVM
  */
@@ -66,20 +67,32 @@ public class StoreVM extends HttpServlet {
 	            rs.forward(request, response);
 			} else {
 				
+				//Update the database
 				if(button == 1) {
 					ps.setString(1, user);
 					ps.setString(2, "running");
-					ps.setInt(3, 1);
-					ps.setInt(4, 2);
+					ps.setInt(3, 2);
+					ps.setInt(4, 4);
 					ps.setInt(5, 50);
 					int updated =ps.executeUpdate();
 					
-					String [] command = {"virt-install", "-n"+user+"", "-s 50", "--vcpus=2", "-r 1024", "--accelerate", "-f path/to/image", " '\' ", "--cdrom debian.iso"};
+					//Make vm from the command line
+					List <String> command = new ArrayList<String>();
+					command.add("sudo");
+					command.add("-S");
+					command.add("virt-install");
+					command.add("");
+					command.add("");
+					command.add("");
+					command.add("");
+					command.add("");
 					ProcessBuilder pb = new ProcessBuilder(command);
-					
+					Process p =pb.start();
+					System.out.println(""+pb.command());
+					//Check if it worked
 					if (updated > 0 ) {
-					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM! Check the status at your personal page.");
-					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");
+					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM! Redirecting you to your personal page.");
+					RequestDispatcher rs = request.getRequestDispatcher("personalpage.jsp");
 					rs.forward(request, response);		
 					} else {
 					JOptionPane.showMessageDialog(dialog, "Something went wrong! Please contact us.");
@@ -89,15 +102,15 @@ public class StoreVM extends HttpServlet {
 				} else if (button == 2) {
 					ps.setString(1, user);
 					ps.setString(2, "running");
-					ps.setInt(3, 1);
-					ps.setInt(4, 2);
-					ps.setInt(5, 50);
+					ps.setInt(3, 4);
+					ps.setInt(4, 8);
+					ps.setInt(5, 200);
 					int updated =ps.executeUpdate();
 					//Check if query is executed
 					//If query is executed then show a message and send to their page.
 					if (updated > 0) {
-					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
-					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");
+					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM! Redirecting you to your personal page.");
+					RequestDispatcher rs = request.getRequestDispatcher("personalpage.jsp");
 					rs.forward(request, response);		
 					} else {
 					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us");
@@ -107,13 +120,13 @@ public class StoreVM extends HttpServlet {
 				} else if (button == 3) {
 					ps.setString(1, user);
 					ps.setString(2, "running");
-					ps.setInt(3, 1);
-					ps.setInt(4, 2);
-					ps.setInt(5, 50);
+					ps.setInt(3, 8);
+					ps.setInt(4, 16);
+					ps.setInt(5, 500);
 					int updated =ps.executeUpdate();
 					if (updated > 0) { 
-					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM!.");
-					RequestDispatcher rs = request.getRequestDispatcher("hosting.jsp");
+					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM! Redirecting you to your personal page.");
+					RequestDispatcher rs = request.getRequestDispatcher("personalpage.jsp");
 					rs.forward(request, response);		
 					} else {
 					JOptionPane.showMessageDialog(dialog, "Something went wrong. Please contact us");	

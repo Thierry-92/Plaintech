@@ -100,6 +100,18 @@ body{
         -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;  
         cursor:pointer;   
 }
+.buttonsss button,.search button,.plans_table tfoot td.order_now button,.domain_button button{
+	    padding:3px 15px;
+	    font-size:15px;
+	    margin-bottom:15px;
+	    font-weight:bold;
+	    color             : #fff;
+	    -webkit-box-shadow: 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
+        -moz-box-shadow   : 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
+        box-shadow        : 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
+        -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;  
+        cursor:pointer;   
+}
 .button button,.search button,.plans_table tfoot td.order_now button,.domain_button button{
 	    padding:10px 15px;
 	    margin-bottom: 15px;
@@ -294,6 +306,7 @@ body{
 	padding:5px 0;
 	font-family:'Electrolize', sans-serif;
 }
+
 /** plans **/
 .content_top{
 	padding:30px 0;
@@ -550,7 +563,7 @@ body{
 	padding:30px 0;
 	background:#F9F9F9;
 }
-.change_vm{
+.change_vm form{
 	width:22%;
 	color:#616161;
 }
@@ -564,6 +577,15 @@ body{
 }
 .personal_page h3,.plans h3,.domain_registration h3{
 	font-size:30px;
+	margin-bottom:25px;
+	color:#3A3939;
+	padding:5px 0;
+	font-family:'Electrolize', sans-serif;
+	text-transform:uppercase;
+}
+.change_vm h3,.plans h3,.domain_registration h3{
+	font-size:30px;
+	margin-bottom:25px;
 	color:#3A3939;
 	padding:5px 0;
 	font-family:'Electrolize', sans-serif;
