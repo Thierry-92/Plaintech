@@ -72,14 +72,13 @@ public class Status extends HttpServlet {
 		         htmlResponse += "</html>";
 		      
 		         out.println(htmlResponse);
-<<<<<<< HEAD
+
 			} 
 			JOptionPane.showMessageDialog(dialog, "Make a VM first please.");
 			RequestDispatcher rss = request.getRequestDispatcher("personalpage.jsp");
 	        rss.forward(request, response);
-=======
+
 			}
->>>>>>> 4a7f151bbc794bb69f0baf233ebc410b7b9d8297
 			}
 			
 			catch(Exception e)

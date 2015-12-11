@@ -67,13 +67,10 @@ public class changeVM extends HttpServlet {
 		    			JOptionPane.showMessageDialog(dialog, "VM is updated successfull.");
 		    			RequestDispatcher rs = request.getRequestDispatcher("personalpage.jsp");
 		    			rs.forward(request, response);
-<<<<<<< HEAD
 		    		} else {
 		    			JOptionPane.showMessageDialog(dialog, "Something failed. Do you have a VM already? If so please contact us.");
 		    			RequestDispatcher rs = request.getRequestDispatcher("personalpage.jsp");
 		    			rs.forward(request, response);
-=======
->>>>>>> 4a7f151bbc794bb69f0baf233ebc410b7b9d8297
 		    		}
 		    	}catch(Exception e)
 		        {
