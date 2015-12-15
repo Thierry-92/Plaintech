@@ -95,14 +95,14 @@ public class StoreVM extends HttpServlet {
 					pb.redirectErrorStream(true);
 					Process p =pb.start();
 					System.out.println(""+pb.command());
-					
+							
 					Reader reader = new InputStreamReader(p.getInputStream());
 				       int ch;
 				       while ((ch = reader.read()) != -1) {
 				           System.out.print((char) ch);
 				       }
 				       reader.close();
-				       
+
 					//Check if it worked
 					if (updated > 0 ) {
 					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM! Redirecting you to your personal page.");
