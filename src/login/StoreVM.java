@@ -1,8 +1,7 @@
 package login;
 
-import java.io.IOException;
+import java.io.*;
 import java.sql.*;
-import java.sql.PreparedStatement;
 import javax.swing.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -80,15 +79,30 @@ public class StoreVM extends HttpServlet {
 					List <String> command = new ArrayList<String>();
 					command.add("sudo");
 					command.add("-S");
-					command.add("virt-install");
-					command.add("");
-					command.add("");
-					command.add("");
-					command.add("");
-					command.add("");
+					command.add("virt-install \\");
+					command.add("--name "+ user + " \\");
+					command.add("--ram 4 \\");
+					command.add("--disk path=/images/"+user+".img,size=50 \\");
+					command.add("--vcpus 2 \\");
+					command.add("--os-type linux \\");
+					command.add("--os-variant generic \\");
+					command.add("--network bridge=br0 \\");
+					command.add("--graphics none \\");
+					command.add("--noautoconsole \\ ");
+					command.add("--location http://archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/ \\");
+					command.add("--extra-args \"console=ttyS0, 115200 auto=true hostname="+user+" url=http://192.168.31.128/\"$preseedFile\"\"");
 					ProcessBuilder pb = new ProcessBuilder(command);
+					pb.redirectErrorStream(true);
 					Process p =pb.start();
 					System.out.println(""+pb.command());
+					
+					Reader reader = new InputStreamReader(p.getInputStream());
+				       int ch;
+				       while ((ch = reader.read()) != -1) {
+				           System.out.print((char) ch);
+				       }
+				       reader.close();
+				       
 					//Check if it worked
 					if (updated > 0 ) {
 					JOptionPane.showMessageDialog(dialog, "Succesfull registered a VM! Redirecting you to your personal page.");
@@ -151,7 +165,6 @@ public class StoreVM extends HttpServlet {
 }
 		
 	}
-	
 
 
 

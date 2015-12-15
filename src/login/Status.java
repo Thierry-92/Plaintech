@@ -79,7 +79,6 @@ public class Status extends HttpServlet {
 	        rss.forward(request, response);
 
 			}
-			}
 			
 			catch(Exception e)
 		     {
