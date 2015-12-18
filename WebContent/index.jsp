@@ -100,7 +100,9 @@
 								<li>No Backup</li>
 								<li>8 AM to 5 PM Live Support</li>
 								<li><form method="post" action="storeVM">
-										<input type="hidden" name="vmstore" id="vmstore" value="1" />
+										<input type="hidden" name="cpu" id="cpu" value="2" />
+										<input type="hidden" name="ram" id="ram" value="4" />
+										<input type="hidden" name="storage" id="storage" value="50" />
 										<div class="buttons">
 											<button type="submit" class="grey">Buy it now!</button>
 										</div>
@@ -120,7 +122,9 @@
 								<li>Normal Backup</li>
 								<li>6 AM to 10 PM Live Support</li>
 								<li><form method="post" action="storeVM">
-										<input type="hidden" name="vmstore" id="vmstore" value="2" />
+										<input type="hidden" name="cpu" id="cpu" value="4" />
+										<input type="hidden" name="ram" id="ram" value="8" />
+										<input type="hidden" name="storage" id="storage" value="200" />
 										<div class="buttons">
 											<button type="submit" class="grey">Buy it now!</button>
 										</div>
@@ -140,7 +144,9 @@
 								<li>Normal Backup &Aacute; Extra Backup</li>
 								<li>24/7 Live Support</li>
 								<li><form method="post" action="storeVM">
-										<input type="hidden" name="vmstore" id="vmstore" value="3" />
+										<input type="hidden" name="cpu" id="cpu" value="8" />
+										<input type="hidden" name="ram" id="ram" value="16" />
+										<input type="hidden" name="storage" id="storage" value="500" />
 										<div class="buttons">
 											<button type="submit" class="grey">Buy it now!</button>
 										</div>

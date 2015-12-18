@@ -33,9 +33,8 @@
 					</div>
 					<ul>
 						<li><form action="login" method="post">
-								<input id="emaillogin" name="emaillogin" type="text"
-									value="Username" class="field"> <input id="passlogin"
-									name="passlogin" type="password" value="Password" class="field">
+								<input id="emaillogin" name="emaillogin" type="text" value="Username" class="field"> 
+								<input id="passlogin" name="passlogin" type="password" value="Password" class="field">
 								<div class="buttonss">
 									<button class="grey">Login</button>
 								</div>
@@ -55,16 +54,14 @@
 					<p>Call us now: 033-7500800</p>
 				</div>
 				<ul>
-					<li><form action="manageVM" method="post">
+					<li><form action="personalpage.jsp" method="post">
 							<div class="buttonss">
-								<button type="submit" class="grey" value="personalpage.jsp">Personal
-									page</button>
+								<button type="submit" class="grey" value="personalpage.jsp">Personal page</button>
 							</div>
 						</form></li>
 					<li><form action="logout" method="post">
 							<div class="buttonss">
-								<button type="submit" class="grey" value="Logout">Log
-									out</button>
+								<button type="submit" class="grey" value="Logout">Logout</button>
 							</div>
 						</form></li>
 				</ul>
@@ -104,34 +101,29 @@
 					<h4>Check the status of your Virtual Machine.</h4>
 					<form action="Status" method="post">
 						<div class="buttonsss">
-							<button type="submit" value="register" class="grey">Click
-								here to check</button>
+							<button type="submit" value="register" class="grey">Click here to check</button>
 						</div>
 					</form>
 
 					<h4>Start your Virtual Machine.</h4>
 					<form method="post" action="Startstopvm">
-						<input type="hidden" type="text" name="startstop" id="startstop"
-							value="1">
+						<input type="hidden" type="text" name="startstop" id="startstop" value="1">
 						<div class="buttonsss">
-							<button type="submit" value="register" class="grey">Start
-								Virtual Machine</button>
+							<button type="submit" value="register" class="grey">Start Virtual Machine</button>
 						</div>
 					</form>
 					<h4>Stop your Virtual Machine.</h4>
 					<form method="post" action="Startstopvm">
 						<input type="hidden" type="text" name="startstop" id="startstop" value="2">
 						<div class="buttonsss">
-							<button type="submit" value="register" class="grey">Stop
-								Virtual Machine</button>
+							<button type="submit" value="register" class="grey">Stop Virtual Machine</button>
 						</div>
 					</form>
 					<h4>Delete your Virtual Machine.</h4>
 					<form method="post" action="Startstopvm">
 						<input type="hidden" type="text" name="startstop" id="startstop" value="3">
 						<div class="buttonsss">
-							<button type="submit" value="register" class="grey">Delete
-								Virtual Machine</button>
+							<button type="submit" value="register" class="grey">Delete Virtual Machine</button>
 						</div>
 					</form>
 				</div>
@@ -147,13 +139,14 @@
 						<h3>Change the specifications of your VM.</h3>
 
 						<form method="post" action="changeVM">
-							Choose the amount of CPU's. <input name="CPU" id="CPU"
-								type="text"><br> Choose the amount of RAM. <input
-								name="RAM" id="RAM" type="text"><br> Choose the
-							amount of Storage. <input name="STORAGE" id="STORAGE" type="text">
+							Choose the amount of CPU's. 
+							<input name="CPU" id="CPU" type="text"><br> 
+							Choose the amount of RAM. 
+							<input name="RAM" id="RAM" type="text"><br> 
+							Choose the amount of Storage. 
+							<input name="STORAGE" id="STORAGE" type="text">
 							<div class="buttons">
-								<button type="submit" value="register" class="grey">Update
-									VM</button>
+								<button type="submit" value="register" class="grey">Update VM</button>
 							</div>
 						</form>
 					</div>
