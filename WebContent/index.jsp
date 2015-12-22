@@ -118,7 +118,7 @@
 								<li class="divider"></li>
 								<li>4 Core CPU</li>
 								<li>8GB RAM</li>
-								<li>100GB Disk Space</li>
+								<li>200GB Disk Space</li>
 								<li>Normal Backup</li>
 								<li>6 AM to 10 PM Live Support</li>
 								<li><form method="post" action="storeVM">
@@ -140,7 +140,7 @@
 								<li class="divider"></li>
 								<li>8 Core CPU</li>
 								<li>16GB RAM</li>
-								<li>150GB Disk Space</li>
+								<li>500GB Disk Space</li>
 								<li>Normal Backup &Aacute; Extra Backup</li>
 								<li>24/7 Live Support</li>
 								<li><form method="post" action="storeVM">
