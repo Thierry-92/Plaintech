@@ -74,6 +74,7 @@ public class Startstopvm extends HttpServlet {
 				command.add("start");
 				command.add(user);
 				ProcessBuilder pb = new ProcessBuilder(command);
+				pb.redirectErrorStream(true);
 				Process p = pb.start();
 				System.out.println("" + pb.command());
 
