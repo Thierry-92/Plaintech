@@ -92,7 +92,7 @@ public class StoreVM extends HttpServlet {
 					command.add("--os-type linux \\");
 					command.add("--os-variant generic \\");
 					command.add("--network bridge=br0 \\");
-					command.add("--graphics none \\");
+					command.add("--graphics vnc,listen=0.0.0.0,port=5901 \\");
 					command.add("--noautoconsole \\ ");
 					command.add("--location http://archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/ \\");
 					command.add("--extra-args \"console=ttyS0, 115200 auto=true hostname=" + user
