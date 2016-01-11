@@ -1,7 +1,12 @@
 package login;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -57,8 +62,55 @@ public class changeVM extends HttpServlet {
 			rs.forward(request, response);
 		} else {
 
-			try {
+			try {				
+				//Update the vm itself. First set the system to use more memory for the vm.
+				List<String> command = new ArrayList<String>();
+				command.add("sudo");
+				command.add("-S");
+				command.add("virsh \\");
+				command.add("setmaxmem \\");
+				command.add(user +" \\");
+				command.add(ram + " \\");
+				command.add("--config \\");
+				
+				//Execute the command
+				ProcessBuilder pb = new ProcessBuilder(command);
+				pb.redirectErrorStream(true);
+				Process p = pb.start();
+				System.out.println("" + pb.command());
 
+				//Show me the results of what happens.
+				Reader reader = new InputStreamReader(p.getInputStream());
+				int ch;
+				while ((ch = reader.read()) != -1) {
+					System.out.print((char) ch);
+				}
+				reader.close();
+				
+				//Update the vm ITSElf
+				List<String> command1 = new ArrayList<String>();
+				command.add("sudo");
+				command.add("-S");
+				command.add("virsh \\");
+				command.add("setmem \\");
+				command.add(user +" \\");
+				command.add(ram + " \\");
+				command.add("--config \\");
+				
+				//Execute the command
+				ProcessBuilder pb1 = new ProcessBuilder(command1);
+				pb.redirectErrorStream(true);
+				Process p1 = pb1.start();
+				System.out.println("" + pb1.command());
+
+				//Show me the results of what happens.
+				Reader reader1 = new InputStreamReader(p1.getInputStream());
+				int ch1;
+				while ((ch1 = reader1.read()) != -1) {
+					System.out.print((char) ch1);
+				}
+				reader1.close();
+				
 				// update the database
 				PreparedStatement ps = conn.prepareStatement("UPDATE vms SET cpu=?,ram=?,storage=? WHERE user_email=?");
 				ps.setString(1, cpu);
@@ -66,7 +118,8 @@ public class changeVM extends HttpServlet {
 				ps.setString(3, storage);
 				ps.setString(4, user);
 				int result = ps.executeUpdate();
-
+				
+				//If its als good show message
 				if (result == 1) {
 					JOptionPane.showMessageDialog(dialog, "VM is updated successfull.");
 					RequestDispatcher rs = request.getRequestDispatcher("personalpage.jsp");

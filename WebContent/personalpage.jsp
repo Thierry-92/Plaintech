@@ -136,7 +136,7 @@
 			<div class="wrap">
 				<div class="ptables">
 					<div class="change_vm">
-						<h3>Change the specifications of your VM.</h3>
+						<h3>Change the specifications of your VM. Shutdown your VM before making changes.</h3>
 
 						<form method="post" action="changeVM">
 							Choose the amount of CPU's. 
