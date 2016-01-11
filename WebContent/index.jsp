@@ -9,8 +9,19 @@
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	function DetectTheThing() {
+		var uagent = navigator.userAgent.toLowerCase();
+		if (uagent.search("iphone") > -1 
+				|| uagent.search("ipad") > -1
+				|| uagent.search("android") > -1
+				|| uagent.search("blackberry") > -1
+				|| uagent.search("webos") > -1)
+			window.location.href = "home.html";
+	}
+</script>
 </head>
-<body>
+<body onload="DetectTheThing()">
 	<div class="header">
 		<div class="header_top">
 			<div class="wrap">
@@ -100,9 +111,9 @@
 								<li>No Backup</li>
 								<li>8 AM to 5 PM Live Support</li>
 								<li><form method="post" action="storeVM">
-										<input type="hidden" name="cpu" id="cpu" value="2" />
-										<input type="hidden" name="ram" id="ram" value="4" />
-										<input type="hidden" name="storage" id="storage" value="50" />
+										<input type="hidden" name="cpu" id="cpu" value="2" /> <input
+											type="hidden" name="ram" id="ram" value="4" /> <input
+											type="hidden" name="storage" id="storage" value="50" />
 										<div class="buttons">
 											<button type="submit" class="grey">Buy it now!</button>
 										</div>
@@ -122,9 +133,9 @@
 								<li>Normal Backup</li>
 								<li>6 AM to 10 PM Live Support</li>
 								<li><form method="post" action="storeVM">
-										<input type="hidden" name="cpu" id="cpu" value="4" />
-										<input type="hidden" name="ram" id="ram" value="8" />
-										<input type="hidden" name="storage" id="storage" value="200" />
+										<input type="hidden" name="cpu" id="cpu" value="4" /> <input
+											type="hidden" name="ram" id="ram" value="8" /> <input
+											type="hidden" name="storage" id="storage" value="200" />
 										<div class="buttons">
 											<button type="submit" class="grey">Buy it now!</button>
 										</div>
@@ -144,9 +155,9 @@
 								<li>Normal Backup &Aacute; Extra Backup</li>
 								<li>24/7 Live Support</li>
 								<li><form method="post" action="storeVM">
-										<input type="hidden" name="cpu" id="cpu" value="8" />
-										<input type="hidden" name="ram" id="ram" value="16" />
-										<input type="hidden" name="storage" id="storage" value="500" />
+										<input type="hidden" name="cpu" id="cpu" value="8" /> <input
+											type="hidden" name="ram" id="ram" value="16" /> <input
+											type="hidden" name="storage" id="storage" value="500" />
 										<div class="buttons">
 											<button type="submit" class="grey">Buy it now!</button>
 										</div>
@@ -172,8 +183,8 @@
 									<td><input type="email" id="email" name="email"
 										value="E-Mail" /><br /> <input type="password" id="pass"
 										name="pass" value="password" /><br /> <input type="text"
-										id="name" name="name" value="Name" /><br /> <input type="text"
-										id="address" name="address" value="Address" /><br /></td>
+										id="name" name="name" value="Name" /><br /> <input
+										type="text" id="address" name="address" value="Address" /><br /></td>
 									<td><input type="text" id="city" name="city" value="City" /><br />
 										<input type="text" id="country" name="country" value="Country" /><br />
 										<input type="text" id="telnumber" name="telnumber"
