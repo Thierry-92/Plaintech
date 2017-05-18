@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<title>	Plaintech </title>
+	<!-- application stylesheet will go here -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!-- dynamically apply native visual theme according to the browser user agent -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojox/mobile/deviceTheme.js" data-dojo-config="mblUserAgent: 'Custom'"></script>
+	<script src="Javascript/Config.java">
+	</script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"></script>
+	<script src="/Javascript/Parsing.java">
+	</script>
+</head>
+<body style="visibility:hidden;">
+    
+	<!-- the view or "page"; select it as the "home" screen -->
+	<div id="Home" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View" data-dojo-props="selected:true">
+		<!-- a sample heading -->
+         <div class="header"> <img src="Images/PlaintechLogo.png" alt="logo"/> </div>
+      
+        <h1 data-dojo-type="dojox.mobile.Heading">
+  <ul data-dojo-type="dojox.mobile.TabBar" barType="segmentedControl" style="float:left;margin-left:6px;">
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Home.html" style="text-decoration:none">Cloud Diensten</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px" selected="true"><a href="Klantenservice.html" style="text-decoration:none">Klantenservice</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="OverPlaintech.html" style="text-decoration:none">Over Plaintech</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Login.html" style="text-decoration:none">Login</a></li>
+  </ul>
+</h1>
+       <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Klantenservice</h2> 
+    
+    <!-- Klantenservice -->
+	<div id="Klantenservice" data-dojo-type="dojox/mobile/View">
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'0900-1234', variableHeight:true">Telefoon nummer</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'8 tot 17 uur open', variableHeight:true">Openingstijden</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Service@plaintech.com', variableHeight:true">E-mail</li>
+		</ul>
+	</div>
+    
+</body>
+</html>

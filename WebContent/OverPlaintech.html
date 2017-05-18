@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<title>	Plaintech </title>
+	<!-- application stylesheet will go here -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!-- dynamically apply native visual theme according to the browser user agent -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojox/mobile/deviceTheme.js" data-dojo-config="mblUserAgent: 'Custom'"></script>
+	<script src="Javascript/Config.java">
+	</script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"></script>
+	<script src="/Javascript/Parsing.java">
+	</script>
+</head>
+<body style="visibility:hidden;">
+    
+	<!-- the view or "page"; select it as the "home" screen -->
+	<div id="Home" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View" data-dojo-props="selected:true">
+		<!-- a sample heading -->
+         <div class="header"> <img src="Images/PlaintechLogo.png" alt="logo"/> </div>
+      
+               <h1 data-dojo-type="dojox.mobile.Heading">
+  <ul data-dojo-type="dojox.mobile.TabBar" barType="segmentedControl" style="float:left;margin-left:6px;">
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Home.html" style="text-decoration:none">Cloud Diensten</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Klantenservice.html" style="text-decoration:none">Klantenservice</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px" selected="true"><a href="OverPlaintech.html" style="text-decoration:none">Over Plaintech</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Login.html" style="text-decoration:none">Login</a></li>
+  </ul>
+</h1>
+       <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Over Plaintech</h2> 
+    
+    <!-- Over plaintech -->
+	<div id="OverPlaintech" data-dojo-type="dojox/mobile/View">
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper purus lorem, eget finibus sem consequat in. Cras sapien erat, lacinia quis est ut, tincidunt accumsan erat. Duis tempus tellus eget ex mollis, ut porttitor felis rutrum. Nulla facilisis arcu sed lorem finibus, a iaculis libero convallis. Duis consectetur erat in libero fringilla fermentum. In imperdiet, purus vitae lobortis lacinia, lorem nulla sodales metus, eu tempus eros sapien vitae tortor. Aenean congue blandit dui sit amet venenatis. Pellentesque molestie magna a lacus laoreet condimentum. Sed velit est, dignissim quis dui id, commodo luctus massa. Suspendisse vitae tortor neque. Etiam pharetra porta fringilla. Sed quis ornare neque, ut venenatis ante. Vestibulum pulvinar, risus sed efficitur pretium, ligula neque consequat nibh, nec molestie est metus eget dolor. Mauris laoreet, justo eu pretium convallis, nibh ante efficitur enim, egestas elementum leo purus vitae tortor.
+<br>
+                <br>
+Proin volutpat, elit quis faucibus scelerisque, justo lacus hendrerit magna, at sodales velit magna ut quam. Quisque sit amet gravida dolor. Sed consequat eget odio ac faucibus. Praesent sed tortor eget nisl egestas lacinia. Praesent tellus est, cursus eu suscipit vitae, auctor non felis. Nunc accumsan massa vitae sem ornare, sed ultricies libero molestie. Praesent vel placerat ligula, ut pellentesque felis. Ut tincidunt porta viverra. Quisque eget purus nec ante blandit dapibus semper sed velit. Ut at lacinia enim. Phasellus vitae diam a diam pulvinar scelerisque vitae nec est. Duis lectus eros, accumsan varius imperdiet non, congue ac erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+<br>
+                <br>
+Nullam vel justo nisl. Integer et malesuada sapien, vel aliquet massa. Praesent vel sagittis lectus. Vestibulum posuere ut tortor sagittis aliquet. Pellentesque iaculis ullamcorper sem. Pellentesque blandit eu lorem ut tincidunt. Suspendisse eget pretium ipsum. Pellentesque ac libero ut metus euismod congue. Vivamus vel venenatis tortor. Nulla sed ante in ante viverra semper. Vivamus vitae ultrices diam. Nulla venenatis ex sed sapien tristique, ut commodo nibh efficitur. Suspendisse eu malesuada sem. 
+</p>
+            <div id="Clouds"><img src="Images/Clouds.jpg" alt="Clouds" id="Clouds"></div>
+            <br>
+		</ul>
+	</div>
+    
+</body>
+</html>

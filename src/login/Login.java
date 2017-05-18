@@ -27,7 +27,7 @@ public class Login extends HttpServlet {
 			// from url.
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
-
+		System.getProperty("java.awt.headless");
 		// Declare some things
 		final JDialog dialog = new JDialog();
 		dialog.setAlwaysOnTop(true);

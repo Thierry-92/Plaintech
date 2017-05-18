@@ -10,18 +10,9 @@
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
-	function DetectTheThing() {
-		var uagent = navigator.userAgent.toLowerCase();
-		if (uagent.search("iphone") > -1 
-				|| uagent.search("ipad") > -1
-				|| uagent.search("android") > -1
-				|| uagent.search("blackberry") > -1
-				|| uagent.search("webos") > -1)
-			window.location.href = "home.html";
-	}
 </script>
 </head>
-<body onload="DetectTheThing()">
+<body>
 	<div class="header">
 		<div class="header_top">
 			<div class="wrap">

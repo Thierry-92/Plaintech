@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<title>	Plaintech </title>
+	<!-- application stylesheet will go here -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!-- dynamically apply native visual theme according to the browser user agent -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojox/mobile/deviceTheme.js" data-dojo-config="mblUserAgent: 'Custom'"></script>
+	<script src="Javascript/Config.java">
+	</script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"></script>
+	<script src="/Javascript/Parsing.java">
+	</script>
+</head>
+<body style="visibility:hidden;">
+    
+	<!-- the view or "page"; select it as the "home" screen -->
+	<div id="Home" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View" data-dojo-props="selected:true">
+		<!-- a sample heading -->
+         <div class="header"> <img src="images/PlaintechLogo.png" alt="logo"/> </div>
+      
+                <h1 data-dojo-type="dojox.mobile.Heading" id="test">
+  <ul data-dojo-type="dojox.mobile.TabBar" barType="segmentedControl" style="float:left;margin-left:6px;">
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px" selected="true"><a href="Home.html" style="text-decoration:none">Cloud Diensten</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Klantenservice.html" style="text-decoration:none">Klantenservice</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="OverPlaintech.html" style="text-decoration:none">Over Plaintech</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Login.html" style="text-decoration:none">Login</a></li>
+  </ul>
+</h1>
+       <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Diensten</h2> 
+        
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+					
+			
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/icon-2.png', variableHeight:true, rightText:'€100,- p/m', moveTo:'packageInfo1'">Lite Pakket</li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/icon-3.png', variableHeight:true, rightText:'€150,- p/m', moveTo:'packageInfo2'">Plus Pakket</li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/icon-1.png', centerText:'€200,- p/m', variableHeight:true, rightText:'€200,- p/m', moveTo:'packageInfo3'">Pro Pakket</li>
+		</ul> 
+	</div>
+    
+    
+	<!-- The "Lite" sub-page -->
+	<div id="packageInfo1" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- a sample heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'Home'">Lite Pakket</h1>
+		<!-- a rounded rectangle list co
+ntainer -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'OS'">Besturingssysteem</li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'2 Core Processor'">Processor</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'4 GB'">Intern geheugen</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'50 GB'">Opslag</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'SLALite'">Service bereikbaarheid</li>
+		</ul>
+        <div style="text-align: center;">
+            <form action="LitePakket.html">
+            <button dojotype="dojox/mobile/Button">Lite Pakket Samenstellen</button>
+            </form>
+        </div>
+        
+        </div>
+	
+    
+    <!-- The "Plus" sub-page -->
+	<div id="packageInfo2" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- a sample heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'Home'">Plus Pakket</h1>
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'OS1', variableHeight:true">Besturingssysteem</li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'4 Core Processor', variableHeight:true">Processor</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'8 GB', variableHeight:true">Intern geheugen</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'100 GB', variableHeight:true">Opslag</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'SLAPlus'">Service bereikbaarheid</li>
+		</ul>
+        <div style="text-align: center;">
+            <form action="PlusPakket.html">
+            <button dojotype="dojox/mobile/Button">Plus Pakket Samenstellen</button>
+            </form>
+        </div>
+	</div>    
+    
+    <!-- The "Pro" sub-page -->
+	<div id="packageInfo3" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- a sample heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'Home'">Pro Pakket</h1>
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'OS2'">Besturingssysteem</li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'8 Core Processor'">Processor</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'16 GB'">Intern geheugen</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'150 GB'">Opslag</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'SLAPro'">Service bereikbaarheid</li>
+		</ul>
+        <div style="text-align: center;">
+            <form action="ProPakket.html">
+            <button dojotype="dojox/mobile/Button">Pro Pakket Samenstellen</button>
+            </form>
+        </div>
+        
+	</div>
+    
+    
+	<!-- SLA Lite -->
+	<div id="SLALite" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- Main view heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'packageInfo1'">Service bereikbaarheid Lite</h1>
+		<!-- subheading -->
+		<h2 data-dojo-type="dojox/mobile/RoundRectCategory">Ondersteuning</h2>
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Maandag tot zaterdag van 8 tot 17 uur', variableHeight:true">E-mail ondersteuning</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Maandag tot zaterdag van 8 tot 17 uur', variableHeight:true">Telefonisch ondersteuning</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Maandag tot zaterdag van 8 tot 17 uur', variableHeight:true">Plaintech web ondersteuning</li>
+			</ul>
+            <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Services</h2>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'99,4%', variableHeight:true">Uptime</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Minder dan 2 uur', variableHeight:true">Responstijd op werkdagen tijdens kantoortijden</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Minder dan 4 uur', variableHeight:true">Responstijd buiten kantoortijden</li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Maandag tot vrijdag van 8 tot 17 uur', variableHeight:true">Plaintech systeem monitoring</li>
+			</ul>
+	</div>
+    
+	<!-- SLA Plus -->
+	<div id="SLAPlus" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- Main view heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'packageInfo2'">Service bereikbaarheid Plus</h1>
+		<!-- subheading -->
+		<h2 data-dojo-type="dojox/mobile/RoundRectCategory">Ondersteuning</h2>
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Elke dag van 6 tot 22 uur', variableHeight:true">E-mail ondersteuning</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Elke dag van 6 tot 22 uur', variableHeight:true">Telefonisch ondersteuning</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Elke dag van 6 tot 22 uur', variableHeight:true">Plaintech web ondersteuning</li>
+			</ul>
+        
+        <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Back-ups</h2>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Elke week', variableHeight:true">Volledige back-ups</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Elke dag', variableHeight:true">Volledige extern back-up</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Om de 8 uur', variableHeight:true">incrimentele back-ups</li>
+			</ul>
+        
+            <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Services</h2>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'99,7%', variableHeight:true">Uptime</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Minder dan 1 uur', variableHeight:true">Responstijd op werkdagen tijdens kantoortijden</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Minder dan 2 uur', variableHeight:true">Responstijd buiten kantoortijden</li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Elke dag van 6 tot 22 uur', variableHeight:true">Plaintech systeem monitoring</li>
+			</ul>
+	</div>    
+    
+    <!-- SLA Pro -->
+	<div id="SLAPro" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- Main view heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'packageInfo3'">Service bereikbaarheid Pro</h1>
+		<!-- subheading -->
+		<h2 data-dojo-type="dojox/mobile/RoundRectCategory">Ondersteuning</h2>
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'24 uur 7 dagen per week', variableHeight:true">E-mail ondersteuning</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'24 uur 7 dagen per week', variableHeight:true">Telefonisch ondersteuning</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'24 uur 7 dagen per week', variableHeight:true">Plaintech web ondersteuning</li>
+			</ul>
+        
+        <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Back-ups</h2>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Elke week', variableHeight:true">Volledige back-ups</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Elke dag', variableHeight:true">Volledige extern back-up</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Om de 3 uur', variableHeight:true">incrimentele back-ups</li>
+			</ul>
+        
+            <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Services</h2>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'99,9%', variableHeight:true">Uptime</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Direct responstijd', variableHeight:true">Responstijd op werkdagen tijdens kantoortijden</li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'Minder dan 1 uur', variableHeight:true">Responstijd buiten kantoortijden</li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="rightText:'24 uur 7 dagen per week', variableHeight:true">Plaintech systeem monitoring</li>
+			</ul>
+	</div>
+
+<!--    LiteOS-->
+<div id="OS" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- a sample heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'packageInfo1'">Besturingsystemen</h1>
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Windows10.png', rightText:'Microsoft Windows 10', variableHeight:true"></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Ubuntu.png', rightText:'Linux Ubuntu', variableHeight:true"></li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Debian.png', rightText:'Linux Debian', variableHeight:true"></li>
+		</ul>
+	</div>
+    
+<!--    PlusOS-->
+<div id="OS1" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- a sample heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'packageInfo2'">Besturingsystemen</h1>
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Windows10.png', rightText:'Microsoft Windows 10', variableHeight:true"></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Ubuntu.png', rightText:'Linux Ubuntu', variableHeight:true"></li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Debian.png', rightText:'Linux Debian', variableHeight:true"></li>
+		</ul>
+	</div>
+    
+<!--    ProOS-->
+<div id="OS2" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View">
+		<!-- a sample heading -->
+		<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Terug', moveTo:'packageInfo3'">Besturingsystemen</h1>
+		<!-- a rounded rectangle list container -->
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Windows10.png', rightText:'Microsoft Windows 10', variableHeight:true"></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Ubuntu.png', rightText:'Linux Ubuntu', variableHeight:true"></li>
+            <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/Debian.png', rightText:'Linux Debian', variableHeight:true"></li>
+		</ul>
+	</div>    
+    
+    
+</body>
+</html>

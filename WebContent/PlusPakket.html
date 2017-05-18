@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<title>	Plaintech </title>
+	<!-- application stylesheet will go here -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!-- dynamically apply native visual theme according to the browser user agent -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojox/mobile/deviceTheme.js" data-dojo-config="mblUserAgent: 'Custom'"></script>
+	<script src="Javascript/Config.java">
+	</script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"></script>
+	<script src="/Javascript/Parsing.java">
+	</script>
+    <script> src="/Javascript/ComboBox.java"</script>
+</head>
+<body style="visibility:hidden;">
+    
+	<!-- the view or "page"; select it as the "home" screen -->
+	<div id="Home" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-type="dojox/mobile/View" data-dojo-props="selected:true">
+		<!-- a sample heading -->
+         <div class="header"> <img src="Images/PlaintechLogo.png" alt="logo"/> </div>
+      
+               <h1 data-dojo-type="dojox.mobile.Heading">
+  <ul data-dojo-type="dojox.mobile.TabBar" barType="segmentedControl" style="float:left;margin-left:6px;">
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Home.html" style="text-decoration:none">Cloud Diensten</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Klantenservice.html" style="text-decoration:none">Klantenservice</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="OverPlaintech.html" style="text-decoration:none">Over Plaintech</a></li>
+      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"><a href="Login.html" style="text-decoration:none">Login</a></li>
+  </ul>
+</h1>
+        <div data-dojo-type="dojox/mobile/RoundRect">
+       <h2 style="text-align: center;"data-dojo-type="dojox/mobile/RoundRectCategory">Plus Pakket Samenstelling</h2> 
+        <br>        
+<!--        LitePakket Samenstelling-->
+    <form id="loginForm" method="post" style="text-align: left;">
+        <div class="fieldset">
+            <div class="field-row">
+                <ul><p>Besturingssysteem</p><input dojoType="dojox/mobile/TextBox" class="Registreren" placeholder=" Windows | Debian | Ubuntu" /> </ul>
+            </div>
+            <div class="field-row">
+                <ul><p>Processor aantal cores</p><input dojoType="dojox/mobile/TextBox" class="Registreren" placeholder=" 4 | 8"> </input>
+            </div>
+                    <div class="field-row">
+                <ul><p>Intern geheugen in GB</p><input dojoType="dojox/mobile/TextBox" class="Registreren" placeholder=" 8 | 16" />
+            </div>
+        <div class="field-row">
+                <ul><p>Opslag in GB</p><input dojoType="dojox/mobile/TextBox" class="Registreren" placeholder=" 100 GB of hoger" />
+            </div>
+        <br>
+            <div style="text-align: center;">
+                <br>
+            <button dojotype="dojox/mobile/Button">Samenstelling Voltooien</button>
+            </div>
+        </div>
+            <br>
+    </form>
+</div>       
+            
+            
+            
+		
+	</div>
+</body>
+</html>
